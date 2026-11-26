@@ -142,4 +142,7 @@ Os dois itens abaixo são válidos, mas pedem mais conhecimento do código (um g
 
 ## Itens conhecidos que não entraram como "primeira contribuição"
 
-Dois itens do histórico do desenvolvimento são válidos, mas mexem em partes mais delicadas e ficam melhor como issues comuns, ainda não criadas: a tela inicial carregar todos os pets e vacinas só para calcular o estado do backup (`src/data/useBackupStatus.ts`) e não haver limite para o tamanho total, descompactado, de um backup importado (`src/services/backup/import.ts` só limita o `data.json`, `MAX_DATA_JSON_BYTES`).
+Dois itens do histórico do desenvolvimento são válidos, mas mexem em partes mais delicadas. Por isso foram criados como issues comuns, sem o rótulo `good first issue`:
+
+- [#28](https://github.com/celsottg/petVaccines/issues/28): a tela inicial carrega todos os pets e vacinas só para calcular o estado do backup (`src/data/useBackupStatus.ts`).
+- [#29](https://github.com/celsottg/petVaccines/issues/29): a importação de backup não limita o tamanho total descompactado do arquivo (`src/services/backup/import.ts` só limita o `data.json`, `MAX_DATA_JSON_BYTES`).
