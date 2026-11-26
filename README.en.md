@@ -85,7 +85,7 @@ The format is defined by a single Zod schema in `src/services/backup/schema.ts`.
 
 ## Contributing
 
-Contributions are very welcome, including non-code ones: suggesting vaccines for the catalog, reviewing texts and translating. Read the [contributing guide](CONTRIBUTING.en.md) and the [code of conduct](CODE_OF_CONDUCT.md). There are [draft first-contribution issues](docs/good-first-issues.md) (in Portuguese), not yet published.
+Contributions are very welcome, including non-code ones: suggesting vaccines for the catalog, reviewing texts and translating. Read the [contributing guide](CONTRIBUTING.en.md) and the [code of conduct](CODE_OF_CONDUCT.md). To get started, see the [issues labelled as a good first contribution](https://github.com/celsottg/petVaccines/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) (in Portuguese).
 
 ## License
 
