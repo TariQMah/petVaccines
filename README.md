@@ -83,7 +83,7 @@ O formato é definido por um único esquema Zod, em `src/services/backup/schema.
 
 ## Como contribuir
 
-Contribuições são muito bem-vindas, inclusive sem programar: sugerir vacinas para o catálogo, revisar textos e traduzir. Leia o [guia de contribuição](CONTRIBUTING.md) e o [código de conduta](CODE_OF_CONDUCT.md). Há [rascunhos de issues para a primeira contribuição](docs/good-first-issues.md), ainda não publicados.
+Contribuições são muito bem-vindas, inclusive sem programar: sugerir vacinas para o catálogo, revisar textos e traduzir. Leia o [guia de contribuição](CONTRIBUTING.md) e o [código de conduta](CODE_OF_CONDUCT.md). Para começar, veja as [issues marcadas como boa primeira contribuição](https://github.com/celsottg/petVaccines/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
 ## Licença
 

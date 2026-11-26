@@ -1,14 +1,16 @@
-# Rascunhos de issues para a primeira contribuição
+# Issues para a primeira contribuição
 
-> **Estes são rascunhos que aguardam a aprovação do dono do repositório. Nenhuma destas issues foi criada no GitHub.** Os rascunhos 1 a 6 são pequenos o bastante para uma primeira contribuição; os dois de "Próximos passos" são maiores. Cada item foi conferido no código em 2026-11-13; antes de criar a issue, confirme que o problema ainda existe.
+> **Estas issues foram criadas no GitHub em 2026-11-26** (#19 a #26). Este arquivo é o registro do texto original; a discussão e o andamento de cada uma estão na própria issue, cujo link aparece abaixo do título. As issues 1 a 6 têm o rótulo `good first issue` ([lista no GitHub](https://github.com/celsottg/petVaccines/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)); as duas de "Próximos passos" são maiores e foram criadas sem ele.
 
-Rótulos sugeridos usam os que já existem no repositório: `good first issue`, `bug`, `enhancement`, `accessibility`, `documentation`. Como as issues do projeto são em português, o texto abaixo já está pronto para colar.
+Os rótulos usam os que já existem no repositório: `good first issue`, `bug`, `enhancement`, `accessibility`, `documentation`. Como as issues do projeto são em português, o texto abaixo também está em português.
 
 Referências de código são caminhos a partir da raiz do repositório. Em todas, vale a regra do projeto: código e commits em inglês, textos da interface em `src/i18n/pt-BR.json`, e `npm test`, `npm run lint` e `npm run typecheck` passando antes do pull request (veja o [guia de contribuição](../CONTRIBUTING.md)).
 
 ---
 
 ## 1. Unificar a checagem de data real do calendário
+
+**Issue:** [#19](https://github.com/celsottg/petVaccines/issues/19)
 
 **Rótulos:** `good first issue`, `enhancement`
 
@@ -28,6 +30,8 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 
 ## 2. A carteira lê os anexos de todos os pets
 
+**Issue:** [#20](https://github.com/celsottg/petVaccines/issues/20)
+
 **Rótulos:** `good first issue`, `enhancement`
 
 **Problema.** `useWallet` em `src/data/useVaccinations.ts` consulta **todos** os anexos do banco (`db.select({ vaccinationId: attachments.vaccinationId }).from(attachments)`, sem `where`), mas só precisa dos anexos das vacinas do pet aberto. Com muitos pets e fotos, a carteira de um pet relê e reprocessa linhas que não são dele a cada mudança.
@@ -40,6 +44,8 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 
 ## 3. A tela de nova vacina faz uma consulta vazia quando não é reforço
 
+**Issue:** [#21](https://github.com/celsottg/petVaccines/issues/21)
+
 **Rótulos:** `good first issue`, `enhancement`
 
 **Problema.** `src/app/vaccinations/new.tsx` chama `useVaccinationDetail(fromVaccinationId ?? '')` sempre. Quando a tela não é de reforço (`fromVaccinationId` ausente), o gancho abre cinco consultas ao vivo com id `''` que nunca encontram nada (`src/data/useVaccinations.ts`).
@@ -51,6 +57,8 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 ---
 
 ## 4. O selo de status pode ficar um dia desatualizado se o app ficar aberto na virada do dia
+
+**Issue:** [#22](https://github.com/celsottg/petVaccines/issues/22)
 
 **Rótulos:** `bug`, `good first issue`
 
@@ -65,6 +73,8 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 
 ## 5. Anúncios de "Backup gerado" e "Prazo salvo" para leitores de tela só funcionam no Android
 
+**Issue:** [#23](https://github.com/celsottg/petVaccines/issues/23)
+
 **Rótulos:** `accessibility`, `bug`, `good first issue`
 
 **Problema.** Em `src/app/backup.tsx`, as mensagens `backup.done` ("Backup gerado...") e `backup.saved` ("Prazo salvo.") usam `accessibilityLiveRegion="polite"`, que existe apenas no Android. No iOS o VoiceOver não anuncia essas mensagens quando aparecem. O mesmo vale para os avisos em `src/components/FormField.tsx`, `src/components/ChoiceChips.tsx`, `src/components/ProofPhotos.tsx` e `src/components/FormError.tsx` (que usa `accessibilityRole="alert"` e `accessibilityLiveRegion="assertive"`).
@@ -77,6 +87,8 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 ---
 
 ## 6. Contribuição sem código: sugerir uma vacina ou traduzir o app
+
+**Issue:** [#24](https://github.com/celsottg/petVaccines/issues/24)
 
 **Rótulos:** `good first issue`, `documentation`
 
@@ -91,13 +103,13 @@ Se uma regra mudar (por exemplo, um ano mínimo), é fácil corrigir só uma del
 
 ---
 
----
-
 ## Próximos passos (maiores do que uma primeira contribuição)
 
-Os dois rascunhos abaixo são válidos, mas pedem mais conhecimento do código (um gancho compartilhado com efeito de desmontagem, e gestos que só rodam em aparelho). Crie-os sem o rótulo `good first issue`, ou deixe para depois que houver contribuidores com mais familiaridade.
+Os dois itens abaixo são válidos, mas pedem mais conhecimento do código (um gancho compartilhado com efeito de desmontagem, e gestos que só rodam em aparelho). Por isso foram criados sem o rótulo `good first issue`.
 
 ### 1. Lógica de limpeza de arquivos não salvos duplicada nos formulários
+
+**Issue:** [#25](https://github.com/celsottg/petVaccines/issues/25)
 
 **Rótulos:** `enhancement` (sem `good first issue`: maior do que uma primeira contribuição)
 
@@ -111,6 +123,8 @@ Os dois rascunhos abaixo são válidos, mas pedem mais conhecimento do código (
 ---
 
 ### 2. Visualizador de foto: toque duplo para dar zoom e alternativa para leitor de tela
+
+**Issue:** [#26](https://github.com/celsottg/petVaccines/issues/26)
 
 **Rótulos:** `accessibility`, `enhancement` (sem `good first issue`: maior do que uma primeira contribuição)
 
@@ -128,4 +142,4 @@ Os dois rascunhos abaixo são válidos, mas pedem mais conhecimento do código (
 
 ## Itens conhecidos que não entraram como "primeira contribuição"
 
-Dois itens do histórico do desenvolvimento são válidos, mas mexem em partes mais delicadas e ficam melhor como issues comuns: a tela inicial carregar todos os pets e vacinas só para calcular o estado do backup (`src/data/useBackupStatus.ts`) e não haver limite para o tamanho total, descompactado, de um backup importado (`src/services/backup/import.ts` só limita o `data.json`, `MAX_DATA_JSON_BYTES`).
+Dois itens do histórico do desenvolvimento são válidos, mas mexem em partes mais delicadas e ficam melhor como issues comuns, ainda não criadas: a tela inicial carregar todos os pets e vacinas só para calcular o estado do backup (`src/data/useBackupStatus.ts`) e não haver limite para o tamanho total, descompactado, de um backup importado (`src/services/backup/import.ts` só limita o `data.json`, `MAX_DATA_JSON_BYTES`).
