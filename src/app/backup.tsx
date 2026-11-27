@@ -67,6 +67,7 @@ function BackupContent({ status }: { status: BackupStatus }) {
     [t('backup.content'), content],
   ];
   const missing = backup.result?.missingPhotos ?? 0;
+  useAnnounce(missing > 0 ? t('backup.missingPhotos', { count: missing }) : null);
 
   return (
     <SafeAreaView edges={['bottom']} style={[styles.flex, { backgroundColor: colors.background }]}>
